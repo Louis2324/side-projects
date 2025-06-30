@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Game</title>
+</head>
+
+<body>
+
+    <div class="game-info">
+        <h4>
+            Welcome To My Game 😁
+        </h4>
+        <p>The rules are simple <br> Find all the pairs before the time <b>runs </b>outs</p>
+        <label for="pairs"> Enter here the things you want to match: (separate by comma's though)
+            <input type="text" id="pairs">
+        </label>
+        <button id="start-btn"> Start game</button>
+    </div>
+
+    <div id="container" class="hide">
+        <div class="gamearea " >
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+            <button class="cards">?</button>
+        </div>
+        <div class="timer-box " >
+            <label for="timerscreen"> ⌛:
+                <input id="timerscreen" readonly value="100">
+            </label>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

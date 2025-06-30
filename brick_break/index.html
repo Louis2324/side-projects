@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Brick Break</title>
+</head>
+<body>  
+  <!-- Game Canvas -->
+  <canvas id="board">  </canvas>
+
+  <div class="gameinfo">
+    <label for="score-screen"> Score : 
+     <input type="text" id="score-screen" value="0" readonly>
+    </label>
+
+    <label for="life-screen"> Lives: 
+     <input type="text" id="life-screen"  readonly>
+    </label>
+  </div>
+
+  <div class="game-end hidden"  id="end-screen">
+        <p>Match End Message</p>
+        <ol id="game-stats">
+            <li><b>Game Statistics</b></li>
+        </ol>
+        <button id="reset-game">Reset</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

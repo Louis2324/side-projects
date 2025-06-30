@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="rps.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <section class="animation-area" id="animationArea">
+      <section id="userChoice" class="choiceScreen"></section>
+      <section id="compChoice" class="choiceScreen"></section>
+    </section>
+
+    <section class="controls-area">
+      <div class="buttons">
+        <button id="scissors">✂️</button>
+        <button id="rock">🪨</button>
+        <button id="paper">📃</button>
+      </div>
+      <div class="score-area">
+        <label for="scorescreen">
+          Score:
+          <input type="text" readonly />
+        </label>
+      </div>
+    </section>
+
+    <script src="rps.js"></script>
+  </body>
+</html>

@@ -1,0 +1,361 @@
+:root {
+  --bg-dark: #0b1215;
+  --accent-1: #5e1914;
+  --accent-2: #424b54;
+  --text-light: #f0f0f0;
+  --highlight: #2a1a3c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+section {
+  border: 2px solid var(--highlight);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  background: var(--bg-dark);
+}
+
+.animation-area {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.choiceScreen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.controls-area {
+  padding: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-size: 2.5rem;
+  background: var(--accent-1);
+  color: var(--text-light);
+  border: 2px solid var(--highlight);
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.2s;
+} 
+:root {
+  /* 3-Color Palette */
+  --void-black: #0a0a0f;
+  --neon-cyan: #00f3ff;
+  --electric-pink: #ff0066;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Core Layout */
+body {
+  min-height: 100vh;
+  background: var(--void-black);
+  color: var(--neon-cyan);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 2rem;
+  gap: 3rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Battle Arena */
+.arena {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.choice-display {
+  background: rgba(10, 10, 15, 0.95);
+  border: 3px solid var(--neon-cyan);
+  border-radius: 15px;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  text-shadow: 0 0 20px var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.choice-display::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 243, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(10, 10, 15, 0.9);
+  border-radius: 15px;
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+button {
+  background: transparent;
+  border: 2px solid var(--electric-pink);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
+  color: var(--electric-pink);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--electric-pink), var(--neon-cyan));
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 0 25px var(--electric-pink);
+}
+
+button:hover::before {
+  opacity: 0.2;
+}
+
+/* Score Display */
+.score {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px var(--neon-cyan);
+  padding: 1rem 2rem;
+  border: 2px solid var(--neon-cyan);
+  border-radius: 8px;
+  background: rgba(10, 10, 15, 0.9);
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-15px);
+  }
+  75% {
+    transform: translateX(15px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(0, 243, 255, 0.3);
+  }
+}
+
+.winner-animation {
+  animation: pulse 0.8s ease-in-out;
+  transform-origin: center;
+}
+
+.winner-animation::before {
+  opacity: 1;
+}
+
+.draw-animation {
+  animation: shake 0.4s ease-in-out;
+  border-color: var(--electric-pink);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .arena {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .choice-display {
+    padding: 2rem;
+    font-size: 5rem;
+  }
+
+  .controls {
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+
+  .score {
+    font-size: 2rem;
+    top: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .choice-display {
+    font-size: 4rem;
+    padding: 1.5rem;
+  }
+
+  button {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: var(--accent-2);
+}
+
+.score-area input {
+  background: transparent;
+  border: 2px solid var(--highlight);
+  border-radius: 4px;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  text-align: center;
+  width: 120px;
+  padding: 0.5rem;
+}
+
+/* Animations */
+@keyframes handShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes winnerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.draw-animation {
+  animation: handShake 0.4s ease-in-out 2;
+}
+
+.winner-animation {
+  animation: winnerPulse 0.3s ease 2;
+}
+
+@media (max-width: 600px) {
+  .animation-area {
+    flex-direction: column;
+  }
+  .choiceScreen {
+    font-size: 5rem;
+  }
+  button {
+    width: 80px;
+    height: 80px;
+  }
+}

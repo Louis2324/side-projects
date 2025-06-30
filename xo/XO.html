@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="XO.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>XOXO</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tic-Tac-Toe</h1>
+      <button id="toggleMode">
+        <i id="icon" class="bx bx-sun" style="color: #ffffff"></i>
+      </button>
+    </header>
+
+    <section id="game-mode">
+      <form>
+        <p>Welcome to My Game</p>
+        <label for="ai">
+          <input type="radio" name="game-mode" id="ai" /> Vs Ai</label
+        >
+        <label for="p2">
+          <input type="radio" name="game-mode" id="p2" /> Classic</label
+        >
+
+        <button type="submit">Goo</button>
+      </form>
+    </section>
+
+    <section id="game-info" class="hidden">
+      <p>
+        Welcome to <b>my</b> X-O game the rules are simple
+        <details>
+          <summary>Game rules</summary>
+          <ul>
+            <li>Pick any character of your choice</li>
+            <li>Get your character to span over 3 cells</li>
+            <li>Good Luck</li>
+          </ul>
+        </details>
+      </p>
+      <label for="letter">
+        Player 1 Letter:
+        <input type="text" maxlength="1" id="letter" />
+      </label>
+      <label for="letter">
+        Player 2 Letter:
+        <input type="text" maxlength="1" id="letter2" />
+      </label>
+      <button id="startBtn">Start game</button>
+    </section>
+
+    <main class="hidden">
+      <div id="game-displays">
+        <div id="turn-screen">
+          <p id="turn-indicator"></p>
+        </div>
+      </div>
+      <section id="game-area">
+        <div class="cells"><button class="cellBtns" id="1"></button></div>
+        <div class="cells"><button class="cellBtns" id="2"></button></div>
+        <div class="cells"><button class="cellBtns" id="3"></button></div>
+        <div class="cells"><button class="cellBtns" id="4"></button></div>
+        <div class="cells"><button class="cellBtns" id="5"></button></div>
+        <div class="cells"><button class="cellBtns" id="6"></button></div>
+        <div class="cells"><button class="cellBtns" id="7"></button></div>
+        <div class="cells"><button class="cellBtns" id="8"></button></div>
+        <div class="cells"><button class="cellBtns" id="9"></button></div>
+      </section>
+    </main>
+    <button id="resetBtn" class="hidden">Try Again?</button>
+  </body>
+  <script src="XO.js"></script>
+</html>

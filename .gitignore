@@ -1,0 +1,4 @@
+**/node_modules
+**/.env
+quiz_app/API
+quiz_app/

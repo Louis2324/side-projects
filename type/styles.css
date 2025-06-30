@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1e0555;
+  color: white;
+}
+
+body,
+.quote-input {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  background-color: #f0db4f;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 700px;
+  max-width: 90%;
+}
+
+.timer {
+  position: absolute;
+  top: 2rem;
+  font-size: 3rem;
+  color: #f0db4f;
+  font-weight: bold;
+}
+
+.quote-display {
+  margin-bottom: 1rem;
+}
+.quote-input {
+  background-color: transparent;
+  border: 2px solid #a1922e;
+  outline: none;
+  margin: none;
+  padding: 0.5rem 1rem;
+  resize: none;
+}
+
+.quote-input:focus {
+  border-color: black;
+}
